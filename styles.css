@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    /* Primary */
+    --blue: hsl(246, 80%, 60%);
+
+    /* Work */
+    --orange: hsl(15, 100%, 70%);
+
+    /* Play */
+    --soft-blue: hsl(195, 74%, 62%);
+
+    /* Study */
+    --light-red: hsl(348, 100%, 68%);
+
+    /* Exercies */
+    --lime-green: hsl(145, 58%, 55%);
+
+    /* Social */
+    --violet: hsl(264, 64%, 52%);
+
+    /* Self Care */
+    --soft-orange: hsl(43, 84%, 65%);
+
+    /* Neutral */
+    --very-dark-blue: hsl(226, 43%, 10%);
+    --dark-blue: hsl(235, 46%, 20%);
+    --desaturated-blue: hsl(235, 45%, 61%);
+    --pale-blue: hsl(236, 100%, 87%);
+    --white: #e9e9e9;
+}
+
+/* Headings: 18px */
+
+body {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
+    color: var(--white);
+
+    background-color: var(--very-dark-blue);
+
+    margin: 0;
+    padding: 5em 0;
+}
+
+h1,
+h2,
+p {
+    margin: 0;
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+h2 {
+    font-size: 1.125rem;
+    font-weight: 400;
+}
+
+.container {
+    width: 85%;
+    margin: 0 auto;
+    max-width: 650px;
+}
+
+.time-tracker__section {
+    border-radius: 16px;
+
+    margin-bottom: 1.5em;
+}
+
+.time-tracker__section--main {
+    background-color: var(--dark-blue);
+}
+
+.time-tracker__section--work {
+    background-color: var(--orange);
+}
+
+.time-tracker__section--play {
+    background-color: var(--soft-blue);
+}
+
+.time-tracker__section--study {
+    background-color: var(--light-red);
+}
+
+.time-tracker__section--exercise {
+    background-color: var(--lime-green);
+}
+
+.time-tracker__section--social {
+    background-color: var(--violet);
+}
+
+.time-tracker__section--self-care {
+    background-color: var(--soft-orange);
+}
+
+.colored-section {
+    background-repeat: no-repeat;
+    background-position: 95% 20%;
+    padding: 1.2em;
+}
+
+.colored-section--main {
+    background-color: var(--blue);
+    border-radius: inherit;
+    gap: 8%;
+    align-items: center;
+    justify-content: initial;
+}
+
+.colored-section--main.container {
+    padding: 1.75em 0;
+}
+
+.colored-section--work {
+    background-image: url('./images/icon-work.svg');
+}
+
+.colored-section--play {
+    background-image: url('./images/icon-play.svg');
+}
+
+.colored-section--study {
+    background-image: url('./images/icon-study.svg');
+}
+
+.colored-section--exercise {
+    background-image: url('./images/icon-exercise.svg');
+}
+
+.colored-section--social {
+    background-image: url('/images/icon-social.svg');
+}
+
+.colored-section--self-care {
+    background-image: url('./images/icon-self-care.svg');
+}
+
+.info-section {
+    background-color: var(--dark-blue);
+    border-radius: 13px;
+
+    padding: 1.75em 0;
+}
+
+.info-section:not(.info-section--main):hover {
+    cursor: pointer;
+    background-color: hsl(234, 38%, 30%);
+}
+
+.info-section__header,
+.info-section__content,
+.colored-section--main,
+.info-section--main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info-section--main {
+    color: var(--desaturated-blue);
+    border-radius: 0 0 initial initial;
+}
+
+.info-section__title--main {
+    font-family: inherit;
+    font-size: 1.125rem;
+    font-weight: 400;
+    color: var(--desaturated-blue);
+}
+
+.info-section__title--main,
+.ellipsis-button {
+    cursor: pointer;
+    background-color: inherit;
+    border: none;
+    padding: 0;
+}
+
+.info-section__title--main:active,
+.info-section__title--main:hover  {
+    color: var(--white);
+}
+
+.info-section__header {
+    margin-bottom: .5em;
+}
+
+.info-section__time {
+    font-size: 1.75rem;
+}
+
+.info-section__previous {
+    color: var(--pale-blue);
+    font-size: .9rem;
+}
+
+.person-image-container {
+    width: 30%;
+}
+
+.person-image {
+    border-radius: 50%;
+    border: 3px solid var(--white);
+    max-width: 100%;
+}
+
+.person-title {
+    color: var(--pale-blue);
+}
+
+.report-for {
+    font-size: 1rem;
+    color: var(--desaturated-blue);
+}
+
+.active-button {
+    color: var(--white);
+}
+
+@media (min-width: 900px) {
+    body {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        max-width: 1200px;
+    }
+
+    .time-tracker__container.container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+            'main work play study'
+            'main exercise social self-care'
+            ;
+        gap: 1.5em;
+        align-items: center;
+    }
+
+    .time-tracker__section--main { grid-area: main; }
+    .time-tracker__section--work { grid-area: work; }
+    .time-tracker__section--play { grid-area: play; }
+    .time-tracker__section--study { grid-area: study; }
+    .time-tracker__section--exercise { grid-area: exercise; }
+    .time-tracker__section--social { grid-area: social; }
+    .time-tracker__section--self-care { grid-area: self-care; }
+
+    .time-tracker__section {
+        margin-bottom: 0;
+        height: 100%;
+    }
+
+    .time-tracker__section--main {
+        /* height: 100%; */
+        display: flex;
+        flex-direction: column;
+        /* gap: 2em; */
+        /* height: 100%; */
+    }
+
+    .colored-section--main.container {
+        padding: 1.75em 0;
+    }
+
+    .colored-section--main {
+        flex: 4;
+    }
+
+    .person-title {
+        font-size: 2rem;
+    }
+
+    .info-section {
+        padding: 2.5em .5em;
+    }
+
+    .info-section--main,
+    .info-section__title--main,
+    .colored-section--main {
+        display: block;
+    }
+
+    .info-section__header {
+        margin-bottom: 1.5em;
+    }
+
+    .info-section__content {
+        display: block;
+    }
+
+    .info-section__time {
+        font-size: 2.5rem;
+        margin-bottom: .3em;
+    }
+
+    .info-section__title--main:not(.info-section__title--main:last-of-type) {
+        margin-bottom: 1em;
+    }
+
+    .person-image-container {
+        width: 50%;
+        margin: 0;
+    }
+
+    .person-title {
+        margin: .25em 0 1em;
+    }
+}
+
+@media (min-width: 1200px){
+    .time-tracker {
+        max-width: 1500px;
+    }
+
+    .time-tracker__container.container {
+        width: 100%;
+    }
+}

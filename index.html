@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  <title>Frontend Mentor | Time tracking dashboard</title>
+
+</head>
+<body>
+
+  <main class="time-tracker">
+    <div class="time-tracker__container container">
+      <section class="time-tracker__section time-tracker__section--main">
+        <div class="colored-section--main">
+          <div class="colored-section--main container">
+            <div class="person-image-container container">
+              <img src="./images/image-jeremy.png" alt="young african man smiling" class="person-image">
+            </div>
+  
+            <h1 class="person-title container">
+              <span class="report-for">Report for</span> <br> Jeremy Robson
+            </h1>
+          </div>
+        </div>
+        
+        <div class="info-section info-section--main container">
+          <button type="button" class="info-section__title--main daily-button">Daily</button>
+          <button type="button" class="info-section__title--main weekly-button active-button">Weekly</button>
+          <button type="button" class="info-section__title--main monthly-button">Monthly</button>
+        </div>
+      </section>
+      
+      <section class="time-tracker__section time-tracker__section--work">
+        <div class="colored-section colored-section--work">
+        </div>
+        
+        <div class="info-section">
+          <div class="info-section__header container">
+            <h2 class="info-section__title">Work</h2>
+            
+            <button type="button" class="ellipsis-button">
+              <img src="./images/icon-ellipsis.svg" alt="ellipsis" class="ellipsis-image">
+            </button>
+          </div>
+          
+          <div class="info-section__content container">
+            <p class="info-section__time work">
+              32hrs
+            </p>
+            
+            <p class="info-section__previous work">
+              Last week - 36hrs
+            </p>
+          </div>
+        </div>
+      </section>
+      
+      <section class="time-tracker__section time-tracker__section--play">
+        <div class="colored-section colored-section--play">
+        </div>
+        
+        <div class="info-section">
+          <div class="info-section__header container">
+            <h2 class="info-section__title">Play</h2>
+            
+            <button type="button" class="ellipsis-button">
+              <img src="./images/icon-ellipsis.svg" alt="ellipsis" class="ellipsis-image">
+            </button>
+          </div>
+          
+          <div class="info-section__content container">
+            <p class="info-section__time play">
+              10hrs
+            </p>
+            
+            <p class="info-section__previous play">
+              Last week - 8hrs
+            </p>
+          </div>
+        </div>
+      </section>
+      
+      <section class="time-tracker__section time-tracker__section--study">
+        <div class="colored-section colored-section--study">
+        </div>
+        
+        <div class="info-section">
+          <div class="info-section__header container">
+            <h2 class="info-section__title">Study</h2>
+
+            <button type="button" class="ellipsis-button">
+              <img src="./images/icon-ellipsis.svg" alt="ellipsis" class="ellipsis-image">
+            </button>
+          </div>
+          
+          <div class="info-section__content container">
+            <p class="info-section__time study">
+              4hrs
+            </p>
+            
+            <p class="info-section__previous study">
+              Last week - 7hrs
+            </p>
+          </div>
+        </div>
+      </section>
+      
+      <section class="time-tracker__section time-tracker__section--exercise">
+        <div class="colored-section colored-section--exercise">
+        </div>
+        
+        <div class="info-section">
+          <div class="info-section__header container">
+            <h2 class="info-section__title">Exercise</h2>
+          
+            <button type="button" class="ellipsis-button">
+              <img src="./images/icon-ellipsis.svg" alt="ellipsis" class="ellipsis-image">
+            </button>
+          </div>
+          
+          <div class="info-section__content container">
+            <p class="info-section__time exercise">
+              4hrs
+            </p>
+            
+            <p class="info-section__previous exercise">
+              Last week - 5hrs
+            </p>
+          </div>
+        </div>
+      </section>
+      
+      <section class="time-tracker__section time-tracker__section--social">
+        <div class="colored-section colored-section--social">
+        </div>
+        
+        <div class="info-section">
+          <div class="info-section__header container">
+            <h2 class="info-section__title">Social</h2>
+
+            <button type="button" class="ellipsis-button">
+              <img src="./images/icon-ellipsis.svg" alt="ellipsis" class="ellipsis-image">
+            </button>
+          </div>
+          
+          <div class="info-section__content container">
+            <p class="info-section__time social">
+              5hrs
+            </p>
+            
+            <p class="info-section__previous social">
+              Last week - 10hrs
+            </p>
+          </div>
+        </div>
+      </section>
+      
+      <section class="time-tracker__section time-tracker__section--self-care">
+        <div class="colored-section colored-section--self-care">
+        </div>
+        
+        <div class="info-section">
+          <div class="info-section__header container">
+            <h2 class="info-section__title">Self Care</h2>
+
+            <button type="button" class="ellipsis-button">
+              <img src="./images/icon-ellipsis.svg" alt="ellipsis" class="ellipsis-image">
+            </button>
+          </div>
+          
+          <div class="info-section__content container">
+            <p class="info-section__time self-care">
+              2hrs
+            </p>
+
+            <p class="info-section__previous self-care">
+              Last week - 2hrs
+            </p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>
