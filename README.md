@@ -40,10 +40,8 @@ I've included 4 screenshots in the `/screenshots` folder: mobile, tablet, deskto
 
 ### Links
 
-I'll update these links once I've submitted my solution.
-
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- [Solution URL](https://www.frontendmentor.io/solutions/mobilefirst-solution-using-vanilla-js-bem-flexbox-and-css-grid-83h8-Jx8S)
+- [Live Site URL](https://victor-nyagudi.github.io/time-tracking-dashboard/)
 
 ## My process
 
