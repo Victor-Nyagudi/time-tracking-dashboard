@@ -217,7 +217,7 @@ h2 {
 }
 
 .person-title {
-    color: var(--pale-blue);
+    color: var(--white);
 }
 
 .report-for {
@@ -304,7 +304,7 @@ h2 {
     }
 
     .info-section__time {
-        font-size: 2.5rem;
+        font-size: 2.75rem;
         margin-bottom: .3em;
     }
 
