@@ -140,7 +140,7 @@ h2 {
 }
 
 .colored-section--social {
-    background-image: url('/images/icon-social.svg');
+    background-image: url('./images/icon-social.svg');
 }
 
 .colored-section--self-care {
