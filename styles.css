@@ -162,7 +162,7 @@ h2 {
 .info-section__header,
 .info-section__content,
 .colored-section--main,
-.info-section--main {
+.timeframe-buttons {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -178,6 +178,8 @@ h2 {
     font-size: 1.125rem;
     font-weight: 400;
     color: var(--desaturated-blue);
+
+    display: block;
 }
 
 .info-section__title--main,
@@ -223,6 +225,12 @@ h2 {
 .report-for {
     font-size: 1rem;
     color: var(--white);
+}
+
+.timeframe-buttons {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
 }
 
 .active-button {
@@ -289,7 +297,7 @@ h2 {
         padding: 2.5em .5em;
     }
 
-    .info-section--main,
+    .timeframe-buttons,
     .info-section__title--main,
     .colored-section--main {
         display: block;
