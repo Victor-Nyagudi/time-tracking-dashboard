@@ -1,0 +1,175 @@
+@import './config';
+
+body {
+    font-family: $primary-font;
+    font-weight: getFontWeight('light');
+    color: getColor('white');
+
+    background-color: getColor('very-dark-blue');
+
+    margin: 0;
+    padding: 5em 0;
+}
+
+h1, h2, p { margin: 0 ;}
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: getFontWeight('regular');
+}
+
+h2 {
+    font-size: 1.125rem;
+    font-weight: getFontWeight('regular');
+}
+
+.container {
+    width: 85%;
+    margin: 0 auto;
+    max-width: 650px;
+}
+
+.time-tracker__section {
+    border-radius: 16px;
+    margin-bottom: 1.5em;
+
+    &--main { background-color: getColor('dark-blue'); }
+    
+    &--work { background-color: getColor('orange'); }
+    
+    &--play { background-color: getColor('soft-blue'); }
+    
+    &--study { background-color: getColor('light-red'); }
+    
+    &--exercise { background-color: getColor('lime-green'); }
+    
+    &--social { background-color: getColor('violet'); }
+    
+    &--self-care { background-color: getColor('soft-orange'); }
+
+    .colored-section {
+        background-repeat: no-repeat;
+        background-position: 95% 20%;
+        padding: 1.2em;
+
+        &--main {
+            justify-content: initial;
+            align-items: center;
+            gap: 8%;
+            
+            background-color: getColor('blue');
+            border-radius: inherit;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &--main.container { padding: 1.75em 0; }
+
+        &--work { background-image: url('../images/icon-work.svg'); }
+        
+        &--play { background-image: url('../images/icon-play.svg'); }
+        
+        &--study { background-image: url('../images/icon-study.svg'); }
+        
+        &--exercise { background-image: url('../images/icon-exercise.svg'); }
+        
+        &--social { background-image: url('../images/icon-social.svg'); }
+        
+        &--self-care { background-image: url('../images/icon-self-care.svg'); }
+    }
+
+    .info-section {
+        background-color: getColor('dark-blue');
+        border-radius: 13px;
+    
+        padding: 1.75em 0;
+
+        &:not(.info-section--main):hover {
+            cursor: pointer;
+            background-color: hsl(234, 38%, 30%);
+        }
+
+        &__header,
+        &__content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &--main {
+            color: getColor('desaturated-blue');
+            border-radius: 0 0 initial initial;
+        }
+
+        &__title--main {
+            font-family: inherit;
+            font-size: 1.125rem;
+            font-weight: getFontWeight('regular');
+            color: getColor('desaturated-blue');
+        
+            display: block;
+            cursor: pointer;
+            background-color: inherit;
+            border: none;
+            
+            padding: 0;
+        }
+
+        .ellipsis-button {
+            cursor: pointer;
+            background-color: inherit;
+            border: none;
+            
+            padding: 0;
+        }
+
+        &__title--main:active,
+        &__title--main:hover {
+            color: getColor('white');
+        }
+
+        &__header { margin-bottom: .5em; }
+
+        &__time { font-size: 1.75rem; }
+
+        &__previous {
+            font-size: .9rem;
+            color: getColor('pale-blue');
+        }
+
+        .timeframe-buttons {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .active-button { color: getColor('white');}
+    }
+
+    .person {
+        &-image-container { width: 30%; }
+
+        &-image {
+            border: 3px solid getColor('white');
+            border-radius: 50%;
+            max-width: 100%;
+        }
+
+        &-title { 
+            color: getColor('white'); 
+
+            .report-for {
+                font-size: 1rem;
+                // color: getColor('white'); Commented to see if white color from parent affects this element
+            }
+        }
+    }
+}
+
+@import './responsive';

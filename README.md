@@ -34,7 +34,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshots/time-tracking-dashboard-fullscreen.png)
+![](./dist/screenshots/time-tracking-dashboard-fullscreen.png)
 
 I've included 4 screenshots in the `/screenshots` folder: mobile, tablet, desktop, and fullscreen.
 
@@ -53,7 +53,7 @@ The JavaScript, as well as the tiny details, came last once I was done making th
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
+- SCSS
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
