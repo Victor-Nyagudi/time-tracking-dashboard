@@ -1,0 +1,97 @@
+@include media-900 {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        min-height: 100vh;
+    }
+
+    .container { max-width: 1200px; }
+
+    .time-tracker__container.container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+            'main work play study'
+            'main exercise social self-care'
+            ;
+        
+        gap: 1.5em;
+        align-items: center;
+    }
+
+    .time-tracker__section {
+        height: 100%;
+        margin-bottom: 0;
+
+        &--main { 
+            grid-area: main; 
+            
+            display: flex;
+            flex-direction: column
+        }
+        
+        &--work { grid-area: work; }
+        
+        &--play { grid-area: play; }
+        
+        &--study { grid-area: study; }
+        
+        &--exercise { grid-area: exercise; }
+        
+        &--social { grid-area: social; }
+        
+        &--self-care { grid-area: self-care; }
+
+        .colored-section--main {
+            flex: 4;
+
+            display: block;
+
+            &.container { padding: 1.75em 0; }
+        }
+
+        .person-title { 
+            font-size: 2rem; 
+            margin: .25em 0 1em;
+        }
+
+        .info-section {
+            padding: 2.5em .5em;
+
+            &__title--main { 
+                display: block; 
+
+                &:not(.info-section__title--main:last-of-type) {
+                    margin-bottom: 1em;
+                }
+            }
+
+            &__header{ margin-bottom: 1.5em; }
+
+            &__content,
+            .timeframe-buttons { 
+                display: block; 
+            }
+
+            &__time {
+                font-size: 2.75rem;
+                margin-bottom: .3em;
+            }
+        }
+        
+        .person-image-container {
+            width: 50%;
+            margin: 0;
+        }
+    }
+}
+
+@include media-1200 {
+    .time-tracker {
+        max-width: 1500px;
+
+        &__container.container { width: 100%; }
+    }
+}
